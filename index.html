@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#edf5ff">
+  <title>Our Little World ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- LOGIN -->
+  <main id="loginPage" class="login-page">
+    <div class="login-decoration">✿</div>
+    <div class="login-brand">our little world</div>
+    <p class="login-subtitle">A little place for your favorite moments.</p>
+
+    <section class="login-card">
+      <div class="login-heart">♡</div>
+      <p class="eyebrow">WELCOME BACK</p>
+      <h1>Come on in.</h1>
+      <p class="muted">Your little world is waiting.</p>
+
+      <form id="loginForm">
+        <label for="email">Email address</label>
+        <input id="email" type="email" placeholder="Your email" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="Your password" required>
+
+        <button class="primary-button login-submit" id="loginButton" type="submit">
+          Enter our world <span>♡</span>
+        </button>
+      </form>
+      <p id="message" class="form-message" role="status"></p>
+    </section>
+    <p class="login-footer">A space made of little moments ♡</p>
+  </main>
+
+  <!-- APP -->
+  <main id="dashboard" class="app-shell hidden">
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Our Little World home">
+        <span class="brand-flower">✿</span>
+        <span>our little world</span>
+      </a>
+      <button id="logoutButton" class="icon-button" aria-label="Sign out" title="Sign out">↗</button>
+    </header>
+
+    <!-- HOME -->
+    <section id="homePage" class="app-page active">
+      <section class="hero-card">
+        <div class="hero-sparkle sparkle-one">✧</div>
+        <div class="hero-sparkle sparkle-two">✦</div>
+        <p class="eyebrow">A LITTLE WORLD FOR TWO</p>
+        <h1>Somewhere between<br>you and me. <span>♡</span></h1>
+        <p class="hero-copy">A little space to share, remember, and grow together.</p>
+        <div class="hero-signature">made of little moments</div>
+        <div class="hero-flower">✿</div>
+      </section>
+
+      <section class="welcome-row">
+        <div>
+          <p class="eyebrow">YOUR SHARED SPACE</p>
+          <h2>Explore your world</h2>
+          <p class="muted">What shall we do today?</p>
+        </div>
+        <span class="welcome-decoration">୨୧</span>
+      </section>
+
+      <section class="feature-grid">
+        <button class="feature-card card-chat" data-page="chat">
+          <span class="feature-icon">☁</span>
+          <span class="feature-name">Our Chat</span>
+          <span class="feature-subtitle">Little conversations</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="feature-card card-memories" data-page="memories">
+          <span class="feature-icon">♡</span>
+          <span class="feature-name">Memories</span>
+          <span class="feature-subtitle">Moments to keep</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="feature-card card-notes" data-page="notes">
+          <span class="feature-icon">✎</span>
+          <span class="feature-name">Shared Notes</span>
+          <span class="feature-subtitle">Little thoughts</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="feature-card card-questions" data-page="questions">
+          <span class="feature-icon">✧</span>
+          <span class="feature-name">Daily Questions</span>
+          <span class="feature-subtitle">Discover something new</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="feature-card card-countdown" data-page="countdown">
+          <span class="feature-icon">♡</span>
+          <span class="feature-name">Our Countdown</span>
+          <span class="feature-subtitle">Special days</span>
+          <span class="card-arrow">↗</span>
+        </button>
+
+        <button class="feature-card card-garden" data-page="garden">
+          <span class="feature-icon">✿</span>
+          <span class="feature-name">Our Garden</span>
+          <span class="feature-subtitle">A place to grow</span>
+          <span class="card-arrow">↗</span>
+        </button>
+      </section>
+
+      <section class="little-reminder">
+        <span>“</span>
+        <p>It's the little things that make a world feel special.</p>
+        <span>♡</span>
+      </section>
+
+      <footer class="app-footer">our little world · always a lovely place to return to</footer>
+    </section>
+
+    <!-- CHAT -->
+    <section id="chatPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">A PLACE FOR YOUR WORDS</p>
+        <h1>Our Chat <span>♡</span></h1>
+        <p class="muted">Little conversations, whenever you need them.</p>
+      </div>
+
+      <div class="chat-panel">
+        <div class="chat-top">
+          <div class="avatar-pair"><span>♡</span><span>✿</span></div>
+          <div><strong>Your little conversation</strong><small>Just between your shared accounts</small></div>
+          <span class="online-dot"></span>
+        </div>
+        <div id="chatMessages" class="chat-messages">
+          <p class="chat-empty">Your conversation starts here ♡</p>
+        </div>
+        <form id="chatForm" class="chat-form">
+          <input id="chatInput" type="text" maxlength="1000" placeholder="Write something sweet..." required>
+          <button id="sendButton" type="submit" aria-label="Send message">➤</button>
+        </form>
+        <p id="chatStatus" class="chat-status" role="status">Connecting...</p>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section id="memoriesPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">THE MOMENTS WE KEEP</p>
+        <h1>Our Memories <span>♡</span></h1>
+        <p class="muted">Every little moment has a story.</p>
+      </div>
+      <div class="section-banner">
+        <span>୨୧</span>
+        <div><strong>A collection of moments</strong><p>Little things worth remembering.</p></div>
+      </div>
+      <div class="memory-grid">
+        <article class="memory-card memory-blue"><span>✿</span><h3>Little beginnings</h3><p>Every lovely story starts somewhere.</p></article>
+        <article class="memory-card memory-lilac"><span>☁</span><h3>Everyday moments</h3><p>The ordinary days can be special too.</p></article>
+        <article class="memory-card memory-pink"><span>♡</span><h3>Favorite memories</h3><p>Keep the moments close.</p></article>
+        <article class="memory-card memory-green"><span>✧</span><h3>More to come</h3><p>There are many pages left to fill.</p></article>
+      </div>
+      <p class="coming-note">Your scrapbook is waiting for its first memories. ♡</p>
+    </section>
+
+    <!-- NOTES -->
+    <section id="notesPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">THOUGHTS, BIG AND SMALL</p>
+        <h1>Shared Notes <span>✎</span></h1>
+        <p class="muted">A little notebook for everything.</p>
+      </div>
+      <div class="note-compose">
+        <label for="noteInput">Write a little note</label>
+        <textarea id="noteInput" rows="3" maxlength="500" placeholder="Something to remember..."></textarea>
+        <button id="addNoteButton" class="primary-button">Add to our notebook ♡</button>
+      </div>
+      <div id="notesList" class="notes-list">
+        <p class="empty-state">Your notebook is waiting for its first note.</p>
+      </div>
+      <p class="coming-note">Notes currently stay on this device. Shared syncing will be added later.</p>
+    </section>
+
+    <!-- QUESTIONS -->
+    <section id="questionsPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">A LITTLE CURIOSITY</p>
+        <h1>Daily Questions <span>✧</span></h1>
+        <p class="muted">There's always something new to discover.</p>
+      </div>
+      <article class="question-card">
+        <span class="question-decoration">☁</span>
+        <p class="eyebrow">TODAY'S LITTLE QUESTION</p>
+        <h2 id="dailyQuestion">What is one small thing that made you happy recently?</h2>
+        <textarea id="answerInput" rows="4" maxlength="500" placeholder="Write your answer here..."></textarea>
+        <button id="saveAnswerButton" class="primary-button">Save my answer ♡</button>
+        <p id="answerStatus" class="form-message"></p>
+        <button id="nextQuestionButton" class="text-button">Give me another question ↗</button>
+      </article>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section id="countdownPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">A DATE TO LOOK FORWARD TO</p>
+        <h1>Our Countdown <span>♡</span></h1>
+        <p class="muted">Counting down to another special day.</p>
+      </div>
+      <article class="countdown-card">
+        <div class="countdown-flower">✿</div>
+        <p class="eyebrow">OUR SPECIAL DAY</p>
+        <h2 id="countdownTitle">A day worth celebrating</h2>
+        <div class="countdown-units">
+          <div><strong id="countDays">--</strong><span>days</span></div>
+          <div><strong id="countHours">--</strong><span>hours</span></div>
+          <div><strong id="countMinutes">--</strong><span>minutes</span></div>
+          <div><strong id="countSeconds">--</strong><span>seconds</span></div>
+        </div>
+        <label for="specialDate">Choose your special date</label>
+        <input id="specialDate" type="date">
+        <label for="specialTitle">Name your occasion</label>
+        <input id="specialTitle" type="text" maxlength="50" placeholder="Our next special day">
+        <button id="saveCountdownButton" class="primary-button">Save our date ♡</button>
+        <p id="countdownStatus" class="form-message"></p>
+      </article>
+    </section>
+
+    <!-- GARDEN -->
+    <section id="gardenPage" class="app-page feature-screen">
+      <div class="page-heading">
+        <button class="back-button" data-home>← Home</button>
+        <p class="eyebrow">SOMETHING LOVELY IS GROWING</p>
+        <h1>Our Garden <span>✿</span></h1>
+        <p class="muted">A little garden, filled with little things.</p>
+      </div>
+      <div class="garden-card">
+        <div class="garden-sky"><span>☁</span><span>✧</span><span>☁</span></div>
+        <div id="gardenFlowers" class="garden-flowers">
+          <span>🌷</span><span>🌼</span><span>🌸</span>
+        </div>
+        <div class="garden-ground"></div>
+        <p id="gardenMessage">Every garden begins with a little care.</p>
+      </div>
+      <div class="garden-controls">
+        <button id="plantButton" class="garden-action"><span>🌱</span><strong>Plant a flower</strong><small>Add to our garden</small></button>
+        <button id="waterButton" class="garden-action"><span>💧</span><strong>Water the garden</strong><small>Give it some care</small></button>
+      </div>
+      <p class="garden-count">Flowers planted: <strong id="flowerCount">3</strong></p>
+      <p class="coming-note">Your garden progress currently stays on this device.</p>
+    </section>
+
+    <!-- BOTTOM NAVIGATION -->
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="nav-item selected" data-nav="homePage"><span>⌂</span><small>Home</small></button>
+      <button class="nav-item" data-nav="chatPage"><span>♡</span><small>Chat</small></button>
+      <button class="nav-item" data-nav="memoriesPage"><span>✿</span><small>Memories</small></button>
+      <button class="nav-item" data-nav="notesPage"><span>✎</span><small>Notes</small></button>
+    </nav>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
